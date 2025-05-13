@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dulce Bailando</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <style>
+        @keyframes bailar {
+
+            0%,
+            100% {
+                transform: rotate(0deg) translateY(0);
+            }
+
+            25% {
+                transform: rotate(-10deg) translateY(-5px);
+            }
+
+            50% {
+                transform: rotate(10deg) translateY(0);
+            }
+
+            75% {
+                transform: rotate(-10deg) translateY(5px);
+            }
+        }
+
+        .repr {
+            padding: 10px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            width: fit-content;
+            margin: 25px auto;
+        }
+
+        <!-- .disc {
+            background-color: rgb(0, 0, 0);
+            border-radius: 280px;
+        }
+
+        .audio-container {
+            width: 100%;
+            max-width: 300px;
+            margin: 10px auto;
+        } -->
+
+
+        .bailando {
+            animation: bailar 1.5s infinite;
+            
+            
+        }
+
+    </style>
+</head>
+
+<body class="flex items-center justify-center min-h-screen bg-pink-100">
+    <div class="text-center">
+        <img src="https://i.gifer.com/1PzJ.gif" alt="Dulce Bailando" class=" bailando" />
+
+        <div class="row">
+            <div class="repr">
+                <!-- <img src="image/disco.gif" alt="" class="disc text-center col-10 offset-1"> -->
+                <div class="audio-container">
+                    <audio autoplay loop hidden>
+                        <source src="audio/cancion.mp3" type="audio/mpeg">
+                        Tu navegador no soporta el elemento de audio.
+                    </audio>
+                </div>
+
+            </div>
+
+        </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</html>
